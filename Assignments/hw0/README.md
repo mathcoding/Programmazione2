@@ -12,7 +12,7 @@ trovate i commenti:
 `   # DA COMPLETARE`
 
 Potete fare un copia-e-incolla dal notebook su
-cui avete lavorato delle funzioni richieste, che sono:
+cui avete lavorato. Le funzioni richieste che devono essere incluse nel file `compito_1.py` sono:
 
 1. `RadiceCubica(x)`
 2. `ApxRadiceQuadrata(x, epsilon=1e-02)`
