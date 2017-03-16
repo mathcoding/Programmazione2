@@ -7,7 +7,11 @@ TODO: Specificare in questo file il vostro NOME, COGNOME e NUMERO DI Matricola
 ## Cosa dovete consegnare
 
 Dovete completare il file `compito_1.py`, andando a scrivere il codice necessario dove
-trovate i commenti "#DA COMPLETARE". Potete fare un copia-e-incolla dal notebook su
+trovate i commenti:
+
+`   # DA COMPLETARE`
+
+Potete fare un copia-e-incolla dal notebook su
 cui avete lavorato delle funzioni richieste, che sono:
 
 1. `RadiceCubica(x)`
