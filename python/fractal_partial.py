@@ -3,6 +3,19 @@
 Created on Wed Mar 22 14:49:34 2017
 
 @author: gualandi
+
+DESCRIZIONE:
+-----------
+Per poter eseguire l'animazione dovete sostiuire alla funzione JuliaRec quella scritta da voi.
+Lo script non è molto pulito per ora, ma dovrebbe dare l'effetto di animazione visto a lezione.
+
+Per eseguirlo si devi aprire la "PowerShell" di Windows (per trovarla fare "cerca applicazione" in windows),
+oppure il terminale (Max e Linux) e poi dovete andare nella cartella dove 
+avete copiato questo script e da li scrivere il comando:
+
+% python ./fractal_partial.py
+
+A quel punto dovrebbe aprirsi una finestra con l'animazione.
 """
 
 import matplotlib.pyplot as plt
