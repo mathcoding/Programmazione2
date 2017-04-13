@@ -20,6 +20,6 @@ Per approfondire gli argomenti trattati nella lezione "A Quick Intro to Machine 
 10. Machine Learning da una prospettiva di ottimizzazione: [Evolution of randomness in optimization methods for supervised machine learning](http://wiki.siam.org/siag-op/images/siag-op/6/64/ViewsAndNews-24-1.pdf)
 11. Articolo di Nature relativo ai due videoclip mostrati a lezione: [Human-level control through deep reinforcement learning](http://www.nature.com/nature/journal/v518/n7540/abs/nature14236.html)
 
-Per la parte di regressione lineare, regressione logistica, e k-nearest neighbour, si consigliano i capitoli 2 e 4 del testo:
+Per la parte di regressione lineare, regressione logistica, e k-nearest neighbour, si consiglia:
 
-12. [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
+12. [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/) (capitoli 2 e 4)
