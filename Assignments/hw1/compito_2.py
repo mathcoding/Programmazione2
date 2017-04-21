@@ -4,56 +4,64 @@ def NomeCognome():
 ## PARTE PRIMA: ESERCIZI CON FOLD
 ##-------------------------------
 
+def FoldR(F, v, Ls):
+    if Ls == []:
+        return v
+    else:
+        return F(Ls[0], FoldR(F,v,Ls[1:]))
+        
 def And(Ls):
-    # DA COMPLETARE
-    pass
+    def MyAnd(x,y):
+        return x and y
+    return FoldR(MyAnd, True, Ls)
 
 def Or(Ls):
-    # DA COMPLETARE
-    pass
+    def MyOr(x,y):
+        return x or y
+    return FoldR(MyOr, False, Ls)
 
 def Length(Ls):
-    # DA COMPLETARE
-    pass
+    return FoldR(lambda x,y: 1+y, 0, Ls)
 
 def Reverse(Ls):
-    # DA COMPLETARE
-    pass
+    def Concatenate(x, Ls):
+        return Ls + [x]
+    return FoldR(Concatenate, [], Ls)
 
-def FoldFactorial(Ls):
-    # DA COMPLETARE
-    pass
-
+def FoldFactorial(n):
+    return FoldR(lambda x,y: x*y, 1, [i+1 for i in range(n)])
+    
 def SumLength(Ls):
-    # DA COMPLETARE
-    pass
+    return FoldR(lambda x,y: (x+y[0], 1+y[1]), (0,0), Ls)
+    
+def Map(F, Ls):
+    return FoldR(lambda x,y: [F(x)]+y, [], Ls)
 
-def Map(Ls):
-    # DA COMPLETARE
-    pass
+def Filter(F, Ls):
+    return FoldR(lambda x,y: [x] + y if F(x) else y, [], Ls)
 
-def Filter(Ls):
-    # DA COMPLETARE
-    pass
+def FoldLeft(F, v, Ls):
+    if Ls == []:
+        return v
+    else:
+        return FoldLeft(F,F(v,Ls[0]),Ls[1:])
 
-def FoldLeft(Ls):
-    # DA COMPLETARE
-    pass
 
 ## PARTE SECONDA: LISTA INFINITA NUMERI PRIMI
 ##-------------------------------------------
 
 def NumeriPrimi():
-    # DA COMPLETARE
-    pass
+    yield 1
+    candidate = 2
+    found = []
+    while True:
+        if all(candidate % prime != 0 for prime in found):
+            yield candidate
+            found.append(candidate)
+        candidate += 1
 
 def Fibonacci():
-    # DA COMPLETARE (FACOLTATIVO)
-    pass
-
-## PARTE TERZA: JULIA SET E FRATTALI
-##----------------------------------
-
-def JuliaSetRec(z, c, k, max_k=64):
-    # DA COMPLETARE
-    pass
+    a, b = 1, 1
+    while True:
+        yield a
+        a, b = b, a+b
