@@ -4,7 +4,7 @@
 
 Dovete mandare per email il file completo `compito_MATRICOLA.py` entro la mezzanotte di martedi 25 aprile 2017.
 
-## NEWS: 21/04/2017: Valutazione
+## Valutazione (aggiornato il 21/04/2017)
 La soluzione che mi invierete sarà valutata con la funzione [accuracy_score](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html), la stessa usata a lezione per misurare l'accuratezza dei modelli di classificazione usati con i dati della maratona di Boston 2016.
 
 ## Cosa dovete consegnare
