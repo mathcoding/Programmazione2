@@ -1,5 +1,8 @@
 # Homework 1: Esercizi di Programmazione Funzionale
 
+## NEWS 21/04/2017: AGGIUNTA SOLUZIONE E FUNZIONE DI TEST
+Il file compito_2.py è stato aggiornato con le soluzioni agli esercizi proposti. È stato aggiunto un semplice file di test per verificare (in parte) la correttezza delle funzioni implementate.
+
 ## Deadline: Termine ultimo di consegna 02/04/2017
 
 Dovete mandare per email il file completo `compito_2.py` entro la mezzanotte di domenica 02 aprile 2017.
