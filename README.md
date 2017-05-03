@@ -19,7 +19,10 @@ Per approfondire gli argomenti trattati nella lezione "A Quick Intro to Machine 
 9. Un tutorial in Python usando la libreria [Scikit](http://scikit-learn.org/stable/tutorial/basic/tutorial.html)
 10. Machine Learning da una prospettiva di ottimizzazione: [Evolution of randomness in optimization methods for supervised machine learning](http://wiki.siam.org/siag-op/images/siag-op/6/64/ViewsAndNews-24-1.pdf)
 11. Articolo di Nature relativo ai due videoclip mostrati a lezione: [Human-level control through deep reinforcement learning](http://www.nature.com/nature/journal/v518/n7540/abs/nature14236.html)
+12. Breve tutorial sulle librerie Pandas e Seaborn: [Pandas & Seaborn - A guide to handle & visualize data elegantly](https://tryolabs.com/blog/2017/03/16/pandas-seaborn-a-guide-to-handle-visualize-data-elegantly/)
+ 
+Per la parte di regressione lineare, regressione logistica, k-nearest neighbour e reti neurali, si consiglia:
 
-Per la parte di regressione lineare, regressione logistica, e k-nearest neighbour, si consiglia:
-
-12. [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/) (capitoli 2 e 4)
+13. [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/) (capitoli 2, 4 e 11)
+14. [Scikit: Reti Neurali per problemi supervisionati](http://scikit-learn.org/stable/modules/neural_networks_supervised.html)
+15. [Learn computer vision fundamentals with the famous MNIST data](https://www.kaggle.com/c/digit-recognizer)
