@@ -5,9 +5,11 @@ Created on Mon May  1 16:43:05 2017
 @author: gualandi
 """
 import time
-
+import csv
 import numpy as np
+
 from numpy import genfromtxt
+from matplotlib import plt
 
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
@@ -21,8 +23,8 @@ def DrawDigit(A, label=''):
     plt.xlabel(label)
     plt.show()
     
-def ElaborateInput(data):
-    """ Prepare input data """
+def ElaborateTrainingSet(data):
+    """ Elaborate training set """
     X = []
     Y = []    
     for row in data:
@@ -30,16 +32,23 @@ def ElaborateInput(data):
         Y.append(int(row[0]))        
     return X, Y
 
+def ElaborateTestSet(data):
+    """ Elaborate test set """
+    X = []
+    for row in data:
+        X.append(np.array(row))
+    return X
+
 def LearnANN(data):
     """ Learn an Artificial Neural Network and return the corresponding object """
-    x_train, y_train = ElaborateInput(data)    
+    x_train, y_train = ElaborateTrainingSet(data)    
     
     # PRIMA DI FARE QUESTO ESERCIZIO, STUDIARE IL TUTORIAL:
     # http://scikit-learn.org/stable/modules/neural_networks_supervised.html
     #
     # ESERCIZIO DA FARE: PROVARE I DIVERSI PARAMETRI DI QUESTA CLASSE
     # http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
-    ann = MLPClassifier(solver='lbfgs', activation='logistic', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1)
+    ann = MLPClassifier(hidden_layer_sizes=(1), random_state=1)
     ann.fit(x_train, y_train)
     return ann
 
@@ -47,7 +56,31 @@ def TestANN(ann, x_test, y_test):
     """ Test the learned ANN on the given set of data """
     y_pred = ann.predict(x_test)
             
-    print("Accuracy: ", accuracy_score(y_test, y_pred))
+    print("Accuracy: ", accuracy_score(y_test, y_pred), ' - Number of itertions:', ann.n_iter_)
+    
+    # Write the predictinos in a .csv file
+    with open('solution.csv','w') as csv_file:
+        writer = csv.writer(csv_file, delimiter=',', lineterminator='\n')
+        writer.writerow(['ImageId','Label'])
+        for i,p in enumerate(y_pred):
+            writer.writerow([i+1,p])
+
+
+def EvaluateANN(ann, x_test):
+    """ Test the learned ANN and produce output for Kaggle """
+    start = time.time()
+    
+    y_pred = ann.predict(x_test)
+    
+    print('Evaluation time:', time.time()-start,'- size:', len(my_test))        
+    print('Number of itertions:', ann.n_iter_)
+    
+    # Write the predictinos in a .csv file
+    with open('solution.csv','w') as csv_file:
+        writer = csv.writer(csv_file, delimiter=',', lineterminator='\n')
+        writer.writerow(['ImageId','Label'])
+        for i,p in enumerate(y_pred):
+            writer.writerow([i+1,p])
     
 
 #------------------------------------------
@@ -75,12 +108,20 @@ if __name__ == "__main__":
     ann = LearnANN(my_data)
     
     print('Learning time:', time.time()-start, '- size:', len(my_data))
-    start = time.time()
     
-    # Fase 2: Evaluate    
+    # Fase 2: local test for learning of parameters
+    # TODO
+    
+    # Fase 3: Evaluate on Kaggle test set
     my_test = genfromtxt('Projects/MINST/test.csv', delimiter=',', skip_header=1)
-    x_test, y_test = ElaborateInput(my_test)
+    x_test = ElaborateTestSet(my_test)    
+    EvaluateANN(ann, x_test)
     
-    TestANN(ann, x_test, y_test)
-    print('Evaluation time:', time.time()-start,'- size:', len(my_test))
+    
+
+
+
+
+
+
 
