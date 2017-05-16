@@ -26,3 +26,10 @@ Per la parte di regressione lineare, regressione logistica, k-nearest neighbour 
 13. [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/) (capitoli 2, 4 e 11)
 14. [Scikit: Reti Neurali per problemi supervisionati](http://scikit-learn.org/stable/modules/neural_networks_supervised.html)
 15. [Learn computer vision fundamentals with the famous MNIST data](https://www.kaggle.com/c/digit-recognizer)
+
+Altre librerie interessanti che anno anche l'interfaccia per Python:
+
+16. [Anaconda Accelerate](https://docs.continuum.io/accelerate/), per avere la licenza dovete creare  un account su Anaconda Cloud usando l'email istituzionale @unipv.it
+17. [Tensor Flow](https://www.tensorflow.org/), con un introduzione usando il [MINST dataset](https://www.tensorflow.org/get_started/mnist/beginners) 
+18. [Theano](http://deeplearning.net/software/theano/), con un semplice tutorial per il [MINST dataset](http://deeplearning.net/tutorial/logreg.html)
+19. [Data Analytics Acceleration Library](https://01.org/daal) di Intel, con moduli python molto simili a ScikitLearn
