@@ -33,3 +33,8 @@ Altre librerie interessanti che anno anche l'interfaccia per Python:
 17. [Tensor Flow](https://www.tensorflow.org/), con un introduzione usando il [MINST dataset](https://www.tensorflow.org/get_started/mnist/beginners) 
 18. [Theano](http://deeplearning.net/software/theano/), con un semplice tutorial per il [MINST dataset](http://deeplearning.net/tutorial/logreg.html)
 19. [Data Analytics Acceleration Library](https://01.org/daal) di Intel, con moduli python molto simili a ScikitLearn
+
+Due riferimenti utili per approfondire la parte sulle reti neurali:
+
+20. [Using neural nets to recognize handwritten digits](http://neuralnetworksanddeeplearning.com/chap1.html)
+21. [Artificial Neural Networks: A Tutorial](http://www.cogsci.ucsd.edu/~ajyu/Teaching/Cogs202_sp12/Readings/jain_ann96.pdf)
